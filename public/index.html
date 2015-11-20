@@ -25,7 +25,7 @@
 
                 var firstName = $("#firstName").val();
                 var lastName = $("#lastName").val();
-                var oldEmail = $("#email").val();
+                var oldEmail = $("#oldEmail").val();
 				var newEmail = $("#newEmail").val();
                 var phone = $("#phone").val();
 
@@ -49,7 +49,8 @@
                         success: function(data) {
                             $("#firstName").val("");
                             $("#lastName").val("");
-                            $("#email").val("");
+                            $("#newEmail").val("");
+							$("#oldEmail").val("");
                             $("#phone").val("");
                             $("#messageMessage").text("Record updated!");
                             $("#message").show();
@@ -91,11 +92,11 @@
                     </div>
                     <div class="form-group">
                         <label for="email">Old Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="For verification" required>
+                        <input type="email" class="form-control" id="oldEmail" placeholder="For verification" required>
                     </div>
 					<div class="form-group">
                         <label for="email">New Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="New Email" required>
+                        <input type="email" class="form-control" id="newEmail" placeholder="New Email" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone</label>
@@ -112,7 +113,7 @@
                         <span class="sr-only">Error:</span>
                         <span id="errorMessage"></span>
                     </div>
-                    <button type="submit" class="btn btn-primary">Update Phone Number</button>
+                    <button type="submit" class="btn btn-primary">Update Phone and Email</button>
                 </div>
             </div>
         </form>
